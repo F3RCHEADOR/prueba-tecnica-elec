@@ -5,7 +5,9 @@ import { UpdateDepartamentoDto } from './dto/update-departamento.dto';
 
 @Controller('departamentos')
 export class DepartamentosController {
-  constructor(private readonly departamentosService: DepartamentosService) {}
+  constructor(private readonly departamentosService: DepartamentosService) {
+
+  }
 
   @Post()
   create(@Body() createDepartamentoDto: CreateDepartamentoDto) {
@@ -19,16 +21,16 @@ export class DepartamentosController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.departamentosService.findOne(+id);
+    return this.departamentosService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateDepartamentoDto: UpdateDepartamentoDto) {
-    return this.departamentosService.update(+id, updateDepartamentoDto);
+    return this.departamentosService.update(id, updateDepartamentoDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.departamentosService.remove(+id);
+    return this.departamentosService.remove(id);
   }
 }
