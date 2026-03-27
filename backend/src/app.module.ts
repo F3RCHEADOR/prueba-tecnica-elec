@@ -4,6 +4,7 @@ import { CiudadesModule } from './ciudades/ciudades.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -19,10 +20,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         password: ConfigService.get('DB_PASSWORD'),
         database: ConfigService.get('DB_NAME'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
-        synchronize: true, //This is only for local development, actualiza la debe con cada cambio en entity
+        synchronize: true, //This is only for local development, actualiza la db con cada cambio en entity
       }),
     }),
-    DepartamentosModule, CiudadesModule, UsuariosModule],
+    DepartamentosModule, CiudadesModule, UsuariosModule, AuthModule],
   controllers: [],
   providers: [],
 })
