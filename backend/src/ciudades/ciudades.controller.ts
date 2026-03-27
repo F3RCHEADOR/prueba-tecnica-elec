@@ -5,7 +5,7 @@ import { UpdateCiudadeDto } from './dto/update-ciudade.dto';
 
 @Controller('ciudades')
 export class CiudadesController {
-  constructor(private readonly ciudadesService: CiudadesService) {}
+  constructor(private readonly ciudadesService: CiudadesService) { }
 
   @Post()
   create(@Body() createCiudadeDto: CreateCiudadeDto) {
@@ -19,16 +19,16 @@ export class CiudadesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.ciudadesService.findOne(+id);
+    return this.ciudadesService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateCiudadeDto: UpdateCiudadeDto) {
-    return this.ciudadesService.update(+id, updateCiudadeDto);
+    return this.ciudadesService.update(id, updateCiudadeDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.ciudadesService.remove(+id);
+    return this.ciudadesService.remove(id);
   }
 }
