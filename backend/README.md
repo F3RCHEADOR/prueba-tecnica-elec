@@ -24,3 +24,9 @@ ademas debi mover el listen a despues de la validationpipe para evitar cualquier
 
 decidi usar bcrypt para encriptar las contrasenas, solo para hacerlo un poco mas seguro ya que tengo el crud que llama todas o solo una, de cualquier forma no seran muy complicadas las contrasenas
 
+** Solo dejare por autorizar departamentos, esto pues para que ciudades no esta bajo proceccion de un guard...
+
+
+** Olvide poner lo de CORPS...
+
+**Para editar una ciudad y poder cambiar de departamento la ciudad, es requerido tener autorizacion puesto que puede ocurrir un error al intentar mover la ciudad o obtener los departamentos... por ende, es necesario asignar guard a ciudad...
