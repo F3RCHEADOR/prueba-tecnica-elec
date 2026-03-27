@@ -19,3 +19,8 @@ ademas de eliminar synchronise o  bueno dejarlo en false, esto por que pues cual
 
 ademas debi mover el listen a despues de la validationpipe para evitar cualquier reinicio dle servidor o comportamiento raro.
 
+
+** crud usuarios
+
+decidi usar bcrypt para encriptar las contrasenas, solo para hacerlo un poco mas seguro ya que tengo el crud que llama todas o solo una, de cualquier forma no seran muy complicadas las contrasenas
+
