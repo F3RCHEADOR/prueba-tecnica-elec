@@ -36,6 +36,11 @@ JWT_SECRET=secretkey123
 PORT=3000
 ```
 
+### Frontend (`frontend/.env`)
+```env
+NEXT_PUBLIC_API_ADRESS=http://localhost:3000
+```
+
 ---
 
 ## Cómo usar la aplicación
